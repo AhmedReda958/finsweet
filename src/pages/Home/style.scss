@@ -1,0 +1,97 @@
+@use "style/variables" as *;
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+.landing {
+  background-color: $main-bg-color;
+  color: white;
+  height: calc(100vh - 92px);
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .text {
+      max-width: 560px;
+
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+      .actions {
+        margin-top: 3rem;
+        font-weight: 500 !important;
+
+        a {
+          margin-left: 3rem;
+          text-decoration: none;
+          color: inherit;
+        }
+        @include media-breakpoint-down(sm) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          a {
+            margin-left: 0;
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+    .image {
+      img {
+        width: 100%;
+        display: none;
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.how-we-work {
+  padding: $section-padding 0;
+  background-color: $alt-bg-color;
+
+  .box-number {
+    background-color: $main-color;
+    position: relative;
+    margin-bottom: 1rem;
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    span {
+      z-index: 3;
+      font-size: 18px;
+      color: white;
+    }
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      position: absolute;
+      background-color: $alt-color;
+      top: 25px;
+      right: 25px;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      position: absolute;
+      background-color: #5239fa;
+      bottom: 8px;
+      left: 8px;
+
+      z-index: 2;
+    }
+  }
+}
