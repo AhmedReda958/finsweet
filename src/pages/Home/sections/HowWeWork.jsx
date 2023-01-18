@@ -1,5 +1,6 @@
-import ArrowLink from "components/ArrowLink";
 import React from "react";
+import "./howwework.scss";
+import ArrowLink from "components/ArrowLink";
 
 const HowWeWork = () => {
   return (

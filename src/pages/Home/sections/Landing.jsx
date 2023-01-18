@@ -1,4 +1,5 @@
 import React from "react";
+import "./landing.scss";
 import Button from "components/Button";
 import img from "assets/images/home.svg";
 import ArrowLink from "components/ArrowLink";

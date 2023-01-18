@@ -1,0 +1,63 @@
+@use "style/variables" as *;
+@import "~bootstrap/scss/bootstrap-grid.scss";
+$gradient: 329.39deg, #1c1e53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%;
+
+.view-projects {
+  padding: $section-padding 0;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+    .text {
+      position: absolute;
+      padding: 3rem;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      color: white;
+      background: linear-gradient($gradient);
+      transition: $main-transition;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      h6 {
+        margin-bottom: 1rem;
+      }
+      p {
+        display: none;
+        margin-bottom: 2rem;
+      }
+      a {
+        color: $alt-color;
+        margin-bottom: 1rem;
+      }
+    }
+    &.main-project .text {
+      width: 60%;
+      p {
+        display: block;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        p {
+          display: none;
+        }
+      }
+    }
+    &:hover {
+      .text {
+        left: 0;
+      }
+    }
+  }
+}

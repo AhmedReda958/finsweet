@@ -1,0 +1,48 @@
+@use "style/variables" as *;
+
+.how-we-work {
+  padding: $section-padding 0;
+  background-color: $alt-bg-color;
+
+  .box-number {
+    background-color: $main-color;
+    position: relative;
+    margin-bottom: 1rem;
+    height: 50px;
+    width: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    span {
+      z-index: 3;
+      font-size: 18px;
+      color: white;
+    }
+    &::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      position: absolute;
+      background-color: $alt-color;
+      top: 25px;
+      right: 25px;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      position: absolute;
+      background-color: #5239fa;
+      bottom: 8px;
+      left: 8px;
+
+      z-index: 2;
+    }
+  }
+}
