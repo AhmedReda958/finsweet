@@ -1,0 +1,25 @@
+.features {
+  padding: $section-padding 0;
+  background-color: $alt-bg-color;
+  .header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      max-width: 616px;
+      margin: 2rem 0;
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 100%;
+    }
+    .card-box {
+      background-color: white;
+    }
+  }
+}

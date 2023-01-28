@@ -1,8 +1,10 @@
 import React from "react";
+import Features from "./sections/features";
 import HowWeWork from "./sections/HowWeWork";
 import Landing from "./sections/Landing";
+import Testimonials from "./sections/testimonials";
 import ViewProjects from "./sections/ViewProjects";
-import "./style.scss";
+import "./sections/style/style.scss";
 
 const Home = () => {
   return (
@@ -10,6 +12,8 @@ const Home = () => {
       <Landing />
       <HowWeWork />
       <ViewProjects />
+      <Features />
+      <Testimonials />
     </>
   );
 };

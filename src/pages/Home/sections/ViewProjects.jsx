@@ -1,6 +1,6 @@
 import React from "react";
 import ArrowLink from "components/ArrowLink";
-import "./projects.scss";
+
 import image1 from "assets/images/project-1.png";
 const ViewProjects = () => {
   return (

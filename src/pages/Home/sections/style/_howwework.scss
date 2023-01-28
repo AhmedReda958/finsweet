@@ -1,9 +1,18 @@
-@use "style/variables" as *;
-
 .how-we-work {
   padding: $section-padding 0;
   background-color: $alt-bg-color;
-
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    .box .box-number {
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+  }
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+  }
   .box-number {
     background-color: $main-color;
     position: relative;

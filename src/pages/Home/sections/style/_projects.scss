@@ -1,5 +1,3 @@
-@use "style/variables" as *;
-@import "~bootstrap/scss/bootstrap-grid.scss";
 $gradient: 329.39deg, #1c1e53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%;
 
 .view-projects {
@@ -9,6 +7,12 @@ $gradient: 329.39deg, #1c1e53 -10.96%, rgba(28, 30, 83, 0.42) 103.96%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+      a {
+        display: none;
+      }
+    }
   }
   .project {
     position: relative;
