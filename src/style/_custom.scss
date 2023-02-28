@@ -1,4 +1,4 @@
-@use "./variables" as *;
+@import "./variables";
 
 $font-size-base: 1rem;
 $h1-font-size: $font-size-base * 3.4;
